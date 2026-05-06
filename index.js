@@ -315,6 +315,10 @@ app.get('/', (req, res) => {
   res.status(200).json('Hello from Backend app!');
 });
 
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 app.get('/api/users', async (req, res) => {
   try {
     const users = await getAllUsers();
